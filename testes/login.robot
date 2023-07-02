@@ -5,7 +5,7 @@ Library    FakerLibrary     locale=pt_BR
 Resource    ${EXECDIR}/resources/keywords/common_keywords.robot
 Resource    ${EXECDIR}/resources/keywords/login/login_keywords.robot
 
-Test Setup     Run Keywords     Abrir o navegador no site     AND    
+Test Setup     Run Keywords     Abrir o navegador no site     AND    Validar se a seção Entrar está visível e clicar para Entrar
 ...                             Validar se a seção de login está visível na tela
 
 Test Teardown       Fechar o Browser

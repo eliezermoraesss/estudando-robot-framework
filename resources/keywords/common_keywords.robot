@@ -13,7 +13,7 @@ ${BROWSER_OPTIONS}                  add_experimental_option('excludeSwitches', [
 
 Abrir o navegador no site
     Open Browser    ${LOGIN_URL}    ${BROWSER}    options=${BROWSER_OPTIONS}
-    Title Should Be    Login | Alura - Cursos online de tecnologia
+    Title Should Be    Alura | Cursos online de Tecnologia
     Maximize Browser Window
 
 Fechar o Browser    

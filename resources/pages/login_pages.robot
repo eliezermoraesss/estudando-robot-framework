@@ -5,6 +5,10 @@ Resource    ${EXECDIR}/resources/locators/login_locators.robot
 
 *** Keywords ***
 
+Validar se a seção Entrar está visível e clicar para Entrar
+    Wait Until Element Is Visible       ${ENTRAR_LOGIN}
+    Click If Element Is Visible         ${ENTRAR_LOGIN}
+
 Validar se a seção de login está visível na tela    
     Wait Until Element Is Visible       ${LOGIN_SESSION_TITLE}
 
