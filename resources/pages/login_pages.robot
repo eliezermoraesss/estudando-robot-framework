@@ -5,6 +5,20 @@ Resource    ${EXECDIR}/resources/locators/login_locators.robot
 
 *** Keywords ***
 
+#########################################################################
+
+Clicar em um item específico do Menu da página de Login
+    [Arguments]     ${text_search}
+    ${element} =    String Replace  ${MENU_OPTION}  ${text_search}
+
+    Wait Until Element Is Visible   ${element}
+    Click If Element Is Visible  ${element}
+
+Validar se o menu está visível na tela
+    Wait Until Element Is Visible       ${MENU_BAR}
+
+##########################################################################
+
 Validar se a seção Entrar está visível e clicar para Entrar
     [Arguments]     ${element_locator}
     Wait Until Element Is Visible       ${ENTRAR_LOGIN}
