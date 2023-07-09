@@ -5,7 +5,16 @@ Resource    ${EXECDIR}/resources/locators/login_locators.robot
 
 *** Keywords ***
 
-#########################################################################
+Adicionar o texto no campo de Pesquisa "O que você quer aprender?"
+    [Arguments]     ${text}
+    Input Text If Element Is Visible  ${INPUT_PESQUISAR}    ${text}
+
+Clicar na lupa de Pesquisa
+    Click If Element Is Visible     ${BTN_LUPA}
+
+Contar os elementos da lista
+    ${valor} =      Get Element Count   ${RESULT_LIST}
+    Log     O valor é ${valor}    console=True
 
 Clicar em um item específico do Menu da página de Login
     [Arguments]     ${text_search}
@@ -16,8 +25,6 @@ Clicar em um item específico do Menu da página de Login
 
 Validar se o menu está visível na tela
     Wait Until Element Is Visible       ${MENU_BAR}
-
-##########################################################################
 
 Validar se a seção Entrar está visível e clicar para Entrar
     [Arguments]     ${element_locator}

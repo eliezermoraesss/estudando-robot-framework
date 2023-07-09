@@ -13,6 +13,7 @@ Force Tags      menu
 
 *** Test Cases ***
 
-Deve acessar a página correspondente ao texto da barra de menus da Home do site da Alura que deve ser passado no teste
+Deve buscar no campo de pesquisa por um assunto e contar os resultados encontrados
 
-    Clicar em um item específico do Menu da página de Login     Dev
+    Adicionar dados no campo de pesquisa da home da Alura e clicar na lupa de Pesquisa      Robot Framework
+    Contar a quantidade de itens dentro da lista retornada
