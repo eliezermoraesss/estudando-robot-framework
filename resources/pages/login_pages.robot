@@ -20,7 +20,6 @@ Clicar em um item específico do Menu da página de Login
     [Arguments]     ${text_search}
     ${element} =    String Replace  ${MENU_OPTION}  ${text_search}
 
-    Wait Until Element Is Visible   ${element}
     Click If Element Is Visible  ${element}
 
 Validar se o menu está visível na tela
@@ -28,7 +27,6 @@ Validar se o menu está visível na tela
 
 Validar se a seção Entrar está visível e clicar para Entrar
     [Arguments]     ${element_locator}
-    Wait Until Element Is Visible       ${ENTRAR_LOGIN}
     Click If Element Is Visible         ${ENTRAR_LOGIN}
 
 Validar se a seção de login está visível na tela    
