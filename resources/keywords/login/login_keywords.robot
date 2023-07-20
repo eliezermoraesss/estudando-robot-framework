@@ -1,16 +1,8 @@
 *** Settings ***
 
-Resource    ${EXECDIR}/resources/pages/login_pages.robot
+Resource    ${EXECDIR}/resources/pages/login/login_pages.robot
 
 *** Keywords ***
-
-Adicionar dados no campo de pesquisa da home da Alura e clicar na lupa de Pesquisa
-    [Arguments]     ${texto}
-    Adicionar o texto no campo de Pesquisa "O que você quer aprender?"      ${texto}   
-    Clicar na lupa de Pesquisa
-
-Contar a quantidade de itens dentro da lista retornada
-    Contar os elementos da lista
 
 Adicionar dados de Login    
     [Arguments]     ${email}    ${password}

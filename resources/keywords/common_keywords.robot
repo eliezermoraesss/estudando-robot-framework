@@ -1,6 +1,9 @@
 *** Settings **
 Documentation   Arquivo de Keywords genéricas
 
+Resource       ${EXECDIR}/resources/pages/header/header_pages.robot
+Resource       ${EXECDIR}/resources/locators/common_locators.robot
+
 Library     SeleniumLibrary
 Library     String
 
@@ -15,6 +18,7 @@ Abrir o navegador no site
     Open Browser    ${LOGIN_URL}    ${BROWSER}    options=${BROWSER_OPTIONS}
     Title Should Be    Alura | Cursos online de Tecnologia
     Maximize Browser Window
+    Validar se o menu está visível na tela 
 
 Fechar o Browser    
     Close Browser 
@@ -46,3 +50,15 @@ String Replace
     END
 
     [Return]    ${template_string}
+
+Validar o título da página
+    [Arguments]     ${title}
+
+    ${element} =    String Replace     ${H1_LOCATOR}       $$      ${title}
+
+    Wait Until Element Is Visible       ${element}
+
+Acessar a URL da HOME
+    Go To   ${LOGIN_URL}
+    Validar se o menu está visível na tela
+
