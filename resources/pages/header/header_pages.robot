@@ -20,3 +20,6 @@ Clicar em um item específico do Menu da página de Login
 
 Validar se o menu está visível na tela
     Wait Until Element Is Visible       ${MENU_BAR}
+
+Clicar no botão de MATRICULE-SE
+    Click If Element Is Visible     ${BTN_MATRICULA}  
