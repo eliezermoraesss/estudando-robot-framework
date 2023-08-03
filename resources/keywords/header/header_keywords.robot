@@ -15,6 +15,3 @@ Selecionar um item no menu
 
 Acessar a página de matrícula
     Clicar no botão de MATRICULE-SE
-
-
-    

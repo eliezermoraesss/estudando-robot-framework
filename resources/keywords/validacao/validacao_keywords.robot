@@ -7,7 +7,7 @@ Resource    ${EXECDIR}/resources/pages/validacao/validacao_pages.robot
 *** Keywords ***
 
 Escolher o plano PRO e acessar página de compra
-    Validar o título da página      Aproveite os últimos dias com o preço atual
+    Validar o título da página      Conhecimento real para o mundo digital.
     Clicar no botão de MATRICULE-SE plano PRO
 
 Preencher somente o campo nome e clicar no botão IR PARA O PRÓXIMO PASSO
@@ -20,5 +20,3 @@ Verificar as mensagens de erro de validação dos campos
     Validar mensagem de erro de email   ${mensagem_erro_email}
     Validar mensagem de erro de cpf     ${mensagem_erro_cpf}
     Validar mensagem de erro de telefone    ${mensagem_erro_telefone}
-
-
